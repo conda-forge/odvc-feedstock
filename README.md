@@ -14,9 +14,7 @@ Summary: Ocean Dimensionless Vertical Coordinates
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/odvc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/odvc-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/odvc-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/odvc-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/odvc-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/odvc-feedstock/branch/master)
+All platforms: [![Circle CI](https://circleci.com/gh/conda-forge/odvc-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/odvc-feedstock)
 
 Current release info
 ====================
