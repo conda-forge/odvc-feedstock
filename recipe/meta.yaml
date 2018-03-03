@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - dask 0.14.2
+    - dask >=0.14.3
     - netcdf4
     - numpy
 
