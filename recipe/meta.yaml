@@ -1,4 +1,4 @@
-{% set version = "0.1.1" %}
+{% set version = "0.1.2" %}
 
 package:
   name: odvc
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/o/odvc/odvc-{{ version }}.tar.gz
-  sha256: 273054000a2926cc729f7bd3fb5caa47562cfa720d52eced7cc9b2dce7c5fc95
+  sha256: 3dea9ee46b7110a3488e838b403af9566b26262bcd57d5ac968b33c3cc14b546
 
 build:
   number: 0
@@ -19,7 +19,7 @@ requirements:
     - pip
   run:
     - python
-    - dask 0.14.2
+    - dask >=0.14.3
     - netcdf4
     - numpy
 
