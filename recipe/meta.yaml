@@ -1,37 +1,42 @@
-{% set version = "0.1.2" %}
+{% set name = "odvc" %}
+{% set version = "1.0.0" %}
 
 package:
-  name: odvc
+  name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/o/odvc/odvc-{{ version }}.tar.gz
-  sha256: 3dea9ee46b7110a3488e838b403af9566b26262bcd57d5ac968b33c3cc14b546
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/odvc-{{ version }}.tar.gz
+  sha256: d74adf7e58540ea562200f1f24c55032bebc17312f479d7714497204ba371e90
 
 build:
-  number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
+  script: {{ PYTHON }} -m pip install . -vv
+  number: 0
 
 requirements:
-  build:
-    - python
+  host:
     - pip
+    - python >=3.7
+    - setuptools-scm
   run:
-    - python
-    - dask >=0.14.3
     - netcdf4
     - numpy
+    - python >=3.7
 
 test:
   imports:
     - odvc
+  commands:
+    - pip check
+  requires:
+    - pip
 
 about:
   home: https://github.com/pyoceans/odvc
-  license: BSD 3-Clause
+  summary: Ocean Dimensionless Vertical Coordinates
+  license: BSD-3-Clause
   license_file: LICENSE.txt
-  summary: 'Ocean Dimensionless Vertical Coordinates'
 
 extra:
   recipe-maintainers:
